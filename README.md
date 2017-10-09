@@ -1,6 +1,10 @@
-# AngularDemo
+# [Hand made toys](http://handmadetoys.in/angular) - Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+
+## npm
+
+Run `npm install` into the project directory.
 
 ## Development server
 
