@@ -1,0 +1,242 @@
+<!--Footer-->
+<footer class="page-footer grey darken-2 center-on-small-only">
+    
+        <!--Footer Links-->
+        <div class="container">
+            <div class="row">
+    
+                <!--First column-->
+                <div class="col-md-3 col-sm-12 col-xs-12 col-lg-3">
+                    <h5 class="title">Quick Links</h5>
+                    <ul>
+                        <li> <a (click)="placingOrderModal.show()">Placing an order</a></li> 
+                        <li> <a (click)="terms.show()">Terms and Conditions</a></li> 
+                        <li> <a (click)="privacy.show()">Privacy Policy</a></li> 
+                        <li> <a (click)="returnnc.show()">Return and Cancellations</a></li> 
+                        <li> <a (click)="shipping.show()">Shipping and Delivery</a></li> 
+                        <li> <a (click)="products.show()">Product Safety</a></li>  
+                    </ul>
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6" style="text-align:center">
+                    <h5 class="title">Socila Links</h5>
+                    <ul>
+                        <li class="card card-1"> <a href="https://twitter.com/Hand_Made_Toyz" target="_blank"><img src="assets/socials/twitter.png"  alt="" title=""/></a></li>
+                        <li class="card card-1"> <a href="https://www.youtube.com/channel/UCXY3GexTAQKtkJTSbXMgh1g" target="_blank"><img src="assets/socials/youtube.png" alt="" title=""/></a></li>
+                        <li class="card card-1"> <a href="https://www.facebook.com/www.handmadetoys.in/" target="_blank"><img src="assets/socials/facebook.png" alt="" title="" /></a></li>
+                        <li class="card card-1"> <a href="https://www.instagram.com/handmadetoyz4u/" target="_blank"><img src="assets/socials/instagram.png"  alt="" title=""/></a></li>
+                        <li class="card card-1"> <a href="https://in.pinterest.com/handmadetoys0117/" target="_blank"><img src="assets/socials/pininterst.png"  alt="" title=""/></a></li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+                <!--Third column-->
+                <div class="col-md-3 col-sm-12 col-xs-12 col-lg-3">
+                    <h5 class="title">NEWSLETTER</h5>
+                    <p>Sign up for the latest news</p>
+                    <form #myForm="ngForm" class="form-inline waves-light" mdbRippleRadius>
+                        <div class="form text-center col-sm-12">
+                            <input class="form-control" type="text" name="email" [(ngModel)]="email" placeholder="Enter your email ID" #emailBox="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required (keyup.enter)="sendEmail(emailBox.value)" style="color:white" [value]="emailValue">
+                        </div>
+                        <div *ngIf="emailBox.touched && emailBox.invalid && emailBox.dirty" class="alert alert-danger">Invalid email</div>
+                    </form>
+                </div>
+                <!--/.Third column-->
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+    
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2017 Copyright: <a href="http://www.handmadetoys.in"> handmadetoys.in </a>
+            </div>
+        </div>
+        <!--/.Copyright-->
+    </footer>
+    <!--/.Footer-->
+
+    <!-- Placing an order  -->
+    <div mdbModal #placingOrderModal="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100 text-center" id="myModalLabel">Placing an order</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="placingOrderModal.hide()">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="text-align:justify;">
+                            In-stock Collections:
+                            At most times, the products from our current catalog, will be in stock and ready to ship. Occasionally, because people love our products, some of our product inventory might be temporarily sold out. We encourage you to call our studio, or write us an email to check the current availability of our in stock collections. If the products from our in stock collection are not available, or if you need more quantity than we have with us, you can place an order with us for the same. Due to the handcrafted nature of our products, we may need some time to make them prepare again, and then get our finished pieces on their way to you. To place a order, write to us at <a href="mailto:mandmadetoyz4u@gmail.com">mandmadetoyz4u@gmail.com</a>.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-md waves-light" data-dismiss="modal" (click)="placingOrderModal.hide()" mdbRippleRadius>Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terms and conditions  -->
+        <div mdbModal #terms="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title w-100 text-center" id="myModalLabel">Terms and conditions</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="terms.hide()">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="text-align:justify;max-height: 300px;overflow-y:auto">
+                                <p>Welcome to handmadetoys.in. If you continue to browse and use this website you are agreeing to comply with and be bound by the following terms and conditions of use and our privacy policy. These govern your relationship with  handmadetoys  in relation to this website. 
+                                    The term  ‘handmadetoys.in’ or 'us' or 'we' refers to the owner of the website whose office is in -140, AicobooNagar,13th Main, 2nd Cross,BTM Layout 1st Stage, Bangalore 560069 The term 'you' refers to the user or viewer of our website. 
+                                    </p>
+                                    <p>The use of this website is subject to the following terms of use:<br>
+                                    •	The content of the pages of this website is for your general information and use only. It is subject to change without notice.<br>
+                                    •	Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meets your specific requirements.<br>
+                                    •	This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics.<br> You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.<br>
+                                    •	Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense.<br>
+                                    •	Prices for our products are subject to change without prior notice.<br>
+                                    •	We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.<br>
+                                    •	We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.<br>
+                                    •	We reserve the right to refuse service to anyone for any reason at any time. In case we refuse a service for which a payment has been made, we will refund the same.<br>
+                                    •	From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).<br>
+                                    •	You may not create a link to this website from another website or document without our prior written consent.
+                                    </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-md waves-light" data-dismiss="modal" (click)="terms.hide()" mdbRippleRadius>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Privacy policy  -->
+         <div mdbModal #privacy="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100 text-center" id="myModalLabel">Privacy Policy</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="privacy.hide()">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="text-align:justify;max-height: 300px;overflow-y:auto">
+                            <h3>General</h3>
+                            <p>•	All information provided at the time of login and/or purchase at www.handmadetoys.in  will be protected and will not be shared externally. We take your privacy seriously and will not share your personal information.<br>
+                            •	The necessary information to complete your order is only shared with the associated courier partner that will be delivering your ordered items.<br>
+                            •	www.handmadetoys.in  does not store your credit / debit card or online bank account information. <br>
+                            •	We do not have a cash on delivery option. <br>
+                            •	Incase you have an issue with payment failure please contact us at <a href="mailto:mandmadetoyz4u@gmail.com">mandmadetoyz4u@gmail.com</a>. We will respond to you within 24 hours of receiving your email and help you sort it out to the best of our abilities.<br>
+                            •	We may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes. This policy is effective from 01/1/2017.
+                            </p>
+                            <h3>What we do with the information we gather</h3>
+                            <p>•	We require this information to understand your needs and provide you with a better service and internal record keeping.<br>
+                            •	We may use the information to improve our products and services.<br>
+                            •	We may periodically send promotional emails about new products, special offers or other information which we think you may find interesting using the email address which you have provided.<br>
+                            •	From time to time, we may also use your information to contact you for market research purposes. We may contact you by email, phone, fax or mail. We may use the information to customize the website according to your interests.
+                            </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-md waves-light" data-dismiss="modal" (click)="privacy.hide()" mdbRippleRadius>Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Return and cancellation  -->
+        <div mdbModal #returnnc="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100 text-center" id="myModalLabel">Returns and Cancellations</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="returnnc.hide()">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="text-align:justify;max-height: 300px;overflow-y:auto">
+                            <p>We care a great deal about customer satisfaction and the quality of our products. Each piece that leaves our Studio is inspected by hand to ensure the same.
+                            All are our products are hand made.Variation and little differences from sample website pic is  inherent due to the hand crafted nature of our pieces . We feel that these characteristics add to the natural beauty and unique quality of our products and are in no way flaws.
+                            </p>
+                            <h3>Terms and Conditions for Returns: </h3>
+                            <p>•	As a policy, we do not offer returns or exchanges on products which are delivered in perfect condition as per the order placed.<br>
+                            •	The dimensions, measurements and appearance of the products which are listed on this website are to the best of our approximations and any challenges regarding the same will not be entertained. <br>
+                            •	In the event of an incorrect order, being delivered please notify us within 24 hours via email at <a href="mailto:mandmadetoyz4u@gmail.com">mandmadetoyz4u@gmail.com</a>. We will arrange for the package to be picked up at the earliest from the delivery address provided while placing the order. The package must be returned in its original condition and packaging; complete with all tags, instructions, and inserts. We will send you your order within 24 hours of receiving the package with the incorrect order.<br>
+                            •	Any products returned without all original packaging and accessories, including the retail box, manuals, inserts, and all other items originally included with the product at the time of delivery will not be replaced.<br>
+                            •	If you notice that the packaging is tampered with or damaged before delivery, please refuse to accept the package and return the package to the delivery person.<br>
+                            •	If you notice that your product is damaged after opening the package, please take a photograph of the products along with their packaging and send it us within 24 hours of the package being received, to <a href="mailto:mandmadetoyz4u@gmail.com">mandmadetoyz4u@gmail.com</a>  with the Subject - ‘Damaged Package’. Please mention your order number and date of transaction in the email.<br>
+                            •	In case your product has been damaged in transit or has genuine quality/manufacturing defect,we are open to extending a store credit or re-fulfilling your order. <br>
+                            •	As most of our pieces are of limited quantity or one-off pieces we may not be able to offer you an identical replacement. Instead, we will offer you a similar product and if that does not meet your approval, we will give you store credits for any future purchase (once the product has been shipped back to us in the condition it was received in). Please make sure that the original product tag and packing is intact.<br>
+                            •	The store credit will be applicable for 6 months.<br>
+                            •	Given the nature of our products, we have the sole discretion, to provide the resolution to any situation as we deem fit. Each return or exchange request is handled on a case by case basis and we request you to get in touch with our team for prompt resolution.<br>
+                            •	No refunds would be given if the customer has provided wrong or incomplete shipping address, there are 3 failed delivery attempts by our shipping agency and/or the package is refused by the recipient.<br>
+                            •	The Definition of a damaged product: A chipped, cracked or completely broken article is considered damaged. Variation in size, colour  and fabric do not consider as damages. 
+                            </p>
+                            <h3>Cancelling an Order</h3>
+                            <p>Once an order is submitted, you have 24 hours, after which you will not be able to cancel an order. Please make sure you confirm all order details prior to submitting the order.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-md waves-light" data-dismiss="modal" (click)="returnnc.hide()" mdbRippleRadius>Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Shipping and delivery  -->
+    <div mdbModal #shipping="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title w-100 text-center" id="myModalLabel">Shipping and delivery</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="shipping.hide()">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="text-align:justify;max-height: 300px;overflow-y:auto">
+                            <p>•	Once we receive your order, it will be processed within 4 business days. <br>
+                                •	Once the order is processed, shipping and delivery will take a minimum of 2-5 working days.<br>
+                                •	Our delivery partners are FedEx, and all our products are delivered by them.<br>
+                                •	In case their courier service is not available in your area, we will ship your items via Government Registered Book post or Speedpost if such an option exists. This may take longer than the above mentioned delivery time.<br>
+                                •	Products are not shipped on Sundays and Public Holidays.<br>
+                                •	Delivery time is also subjective to delays arising out of bad weather conditions, strikes, public holidays or any other unexpected delay from our courier and travel partners. <br>
+                                •	Your shipping costs are subject to the cost of the purchase being made. For any queries regarding the shipment of your purchase, please email us at <a href="mailto:mandmadetoyz4u@gmail.com">mandmadetoyz4u@gmail.com</a>.<br>
+                                •	You will receive an automated email with your delivery confirmation and tracking numbers. <br>
+                                •	You can then track your order at <a href="http://fedex.in" target="_blank">www.fedex.in</a>.<br>
+                                •	For all shipments, we use the following rates to calculate shipping:<br>
+                                    Rs 50 - Value of Cart is between Rs 100 and Rs 1000.<br>
+                                    FREE SHIPPING - Value of Cart is greater than Rs 1000<br>
+                                •	Once the order is processed and if the package is not received by the customer at their end, then the order will be considered null and void. The package will be returned to us and will have to be reshipped. Extra Delivery charges will apply. There will be no refund in such cases.<br>
+                                •	You will automatically be added to our mailing list once you check out from our platform. 
+                                </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-md waves-light" data-dismiss="modal" (click)="shipping.hide()" mdbRippleRadius>Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product safety  -->
+        <div mdbModal #products="mdb-modal" class="modal fade" id="basicExample" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title w-100 text-center" id="myModalLabel">Product Safety</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="products.hide()">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="text-align:justify;">
+                                The safety of our products for you and your friends is extremely important to us. Each piece – we collected from indigenous artist– is crafted by hand and Made of natural substances.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-md waves-light" data-dismiss="modal" (click)="products.hide()" mdbRippleRadius>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>

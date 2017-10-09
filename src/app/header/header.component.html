@@ -1,0 +1,40 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark grey darken-2">
+  
+<!-- Navbar brand -->
+<logo>
+  <a class="navbar-brand" [routerLink]="['/home']">Hand Made Toys </a>
+</logo>
+
+<!-- Collapsible content -->
+<links>
+
+<!-- Links -->
+<ul class="navbar-nav mr-auto">
+   <li class="nav-item" routerLinkActive="active">
+       <a class="nav-link waves-light" [routerLink]="['/home']" mdbRippleRadius>Home</a>
+   </li>
+   <li class="nav-item" routerLinkActive="active">
+       <a class="nav-link waves-light" [routerLink]="['/shop']" mdbRippleRadius>Shop</a>
+   </li>
+   <li class="nav-item">
+       <a class="nav-link waves-light" href="https://seemaawasthiblog.wordpress.com/" target="_blank" mdbRippleRadius>Blog</a>
+   </li>
+   <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link waves-light" [routerLink]="['/about-us']" mdbRippleRadius>About us</a>
+  </li>
+  <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link waves-light" [routerLink]="['/contact-us']" mdbRippleRadius>Contact us</a> 
+  </li>
+</ul>
+<!-- Links -->
+
+<!-- Search form -->
+<!--<form class="form-inline  waves-light" mdbRippleRadius>
+   <input class="form-control mr-sm-2" type="text" placeholder="Search">
+</form>-->
+</links>
+<!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
